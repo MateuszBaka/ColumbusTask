@@ -10,6 +10,8 @@ export class ArticlesComponent implements OnInit {
   netPrice: string = '0,00';
   colors: string[] = ['White','Green','Red','Blue'];
   selectedColor: string = this.colors[0];
+  ishiddenText: boolean = true;
+  btnText: string = 'Read more';
 
   constructor(public transferService: TransferService) {}
   
@@ -23,5 +25,10 @@ export class ArticlesComponent implements OnInit {
 
   addToCart() {
     this.transferService.add(Number.parseFloat(this.netPrice));
+  }
+
+  readMoreLess() {
+    this.ishiddenText = !this.ishiddenText;
+    this.btnText = this.ishiddenText ? 'Read more' : 'Less text';
   }
 }

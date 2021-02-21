@@ -1,0 +1,86 @@
+$white: #fff;
+$brown: #545344;
+$dark_blue: rgb(21, 21, 114);
+$darkturquoise: darkturquoise;
+$width-desktop: 64em;
+
+footer {
+    padding: 1rem;
+    background-color: $brown;
+    color: $white;
+
+    .container, .links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .padding, .padding-left {
+        padding-left: 0.9375rem;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .logo {
+        width: 15.625rem;
+    }
+
+    .social_network {
+        list-style: none;
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .facebook, .twitter, .linkedin {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .facebook {
+        color: $dark_blue;
+        font-size: 2em;
+    }
+
+    .twitter {
+        color: $darkturquoise;
+    }
+
+    .network, .bestsellers {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: #{$width-desktop}) {
+    footer {
+        padding: 3rem;
+        height: 18.75rem;
+
+        .container, .links {
+            flex-direction: row;
+        }
+
+        .content {
+            width: 70%;
+        }
+
+        .padding-left {
+            padding-left: 5rem;
+        }
+
+        .network {
+            width: 10%;
+        }
+
+        .bestsellers {
+            width: 20%;
+        }
+    }
+}

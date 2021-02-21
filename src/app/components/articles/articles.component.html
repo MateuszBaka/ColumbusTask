@@ -1,26 +1,55 @@
-<section>
+<div class="content">
     <app-product-list></app-product-list>
-    <div class="cart">
-        <h1>Paper</h1>
-        <div class="container">
-            <div class="price">
-                <div>
-                    <p>{{transferService.netPrice | async}} kr</p>
-                    <p>{{transferService.grossPrice | async}}</p>
+    <section>
+        <div class="cart">
+            <h1>Paper</h1>
+            <div class="container">
+                <div class="price">
+                    <div>
+                        <p>{{transferService.netPrice | async}} kr</p>
+                        <p>{{transferService.grossPrice | async}}</p>
+                    </div>
+                    <mat-form-field>
+                        <mat-select [(value)]="selectedColor">
+                        <mat-option *ngFor="let color of colors" [value]="color">{{ color }}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
                 </div>
-                <mat-form-field>
-                    <mat-select [(value)]="selectedColor">
-                      <mat-option *ngFor="let color of colors" [value]="color">{{ color }}</mat-option>
-                    </mat-select>
-                </mat-form-field>
+                <button mat-stroked-button mat-button (click)="addToCart()">Buy</button>
             </div>
-            <button mat-stroked-button mat-button (click)="addToCart()">Buy</button>
         </div>
+        <app-gallery></app-gallery>
+        <article>
+            <div class="article">
+                <p [ngClass]="{ 'expand' : ishiddenText, 'collapse': ishiddenText }">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+                </p>
+                <button mat-stroked-button mat-button (click)="readMoreLess()">{{btnText}}</button>
+            </div>
+        </article>
+    </section>
+</div>
+<div class="inspiration-boxes">
+    <div class="box">
+        <p>Paper is awesome!</p>
+        <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+        </span>
     </div>
-    <app-gallery></app-gallery>
-    <article>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales
-    </article>
-</section>
+    <div class="box margin">
+        <p>Paper is awesome!</p>
+        <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
+        </span>
+    </div>
+    <div class="box">
+        <p>Paper is awesome!</p>
+        <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet la.
+        </span>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+$light-gray: #e0e0e0;
+$silver: #a8a8a8;
+$custom-scrollbar-width: 0.4375rem;
+
+::-webkit-scrollbar {
+    width: $custom-scrollbar-width;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: $custom-scrollbar-width / 2;
+    background-color: $light-gray;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $silver;
+    border-radius: $custom-scrollbar-width / 2;
+}

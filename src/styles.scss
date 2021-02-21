@@ -1,7 +1,9 @@
+@import 'assets/scss/topography';
+@import 'assets/scss/scrollbar';
+
 html {
     box-sizing: border-box;
 }
-$white:#fff;
 
 *,
 *::before,
@@ -20,12 +22,4 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-    color: $white;
-}
-
-button {
-    width: 6.25rem;
 }

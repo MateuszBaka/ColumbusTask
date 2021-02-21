@@ -13,7 +13,6 @@ import { SearchComponent } from './components/search/search.component';
 import { MatBadgeModule } from '@angular/material/badge';
 import { HttpClientModule } from "@angular/common/http";
 import { CartComponent } from './components/cart/cart.component';
-import { ContentComponent } from './components/content/content.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
@@ -28,7 +27,6 @@ import { TransferService } from './services/transfer.service';
     MenuComponent,
     SearchComponent,
     CartComponent,
-    ContentComponent,
     ProductListComponent,
     ArticlesComponent,
     GalleryComponent
