@@ -1,0 +1,8 @@
+<div class="item_view">
+    <img src="{{selectedRow.path}}" alt="{{selectedRow.name}}">
+    <ul>
+        <li *ngFor="let item of items" (click)="show(item.id)">
+            <img src="{{item.path}}" alt="{{item.name}}">
+        </li>
+    </ul>
+</div>

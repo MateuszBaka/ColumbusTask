@@ -1,0 +1,25 @@
+$width-desktop: 64em;
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.cart {
+    display: none;
+}
+
+@media screen and (min-width: #{$width-desktop}) {
+    mat-icon {
+        font-size: 3.125rem;
+        ::ng-deep .mat-badge-content {
+            display: none;
+        }
+    }
+
+    .cart {
+        margin: 0 1rem 0 2rem;
+        white-space: nowrap;
+        display: inline-block;
+    }
+}

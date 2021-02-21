@@ -1,0 +1,11 @@
+$width-desktop: 64em;
+
+app-menu {
+    display: none;
+}
+
+@media screen and (min-width: #{$width-desktop}) {
+    app-menu {
+        display: block;
+    }
+}

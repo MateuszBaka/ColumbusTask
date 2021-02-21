@@ -1,0 +1,28 @@
+$brown:        #5c5c5c;
+$light-purple: #ed2b91;
+$dark-purple:  #ed2b81;
+
+ul {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    background-color: $light-purple;
+
+    li a {
+        height: 3rem;
+        display: block;
+        text-align: center;
+        font-size: 1.2em;
+        min-width: 12.5rem;
+        white-space: nowrap;
+        text-decoration: none;
+        padding: 0.875rem 0.9375rem;
+    }
+        
+    li a:hover {
+        color: $brown;
+        background: $dark-purple;
+    }
+}

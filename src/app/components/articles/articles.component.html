@@ -1,0 +1,26 @@
+<section>
+    <app-product-list></app-product-list>
+    <div class="cart">
+        <h1>Paper</h1>
+        <div class="container">
+            <div class="price">
+                <div>
+                    <p>{{transferService.netPrice | async}} kr</p>
+                    <p>{{transferService.grossPrice | async}}</p>
+                </div>
+                <mat-form-field>
+                    <mat-select [(value)]="selectedColor">
+                      <mat-option *ngFor="let color of colors" [value]="color">{{ color }}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <button mat-stroked-button mat-button (click)="addToCart()">Buy</button>
+        </div>
+    </div>
+    <app-gallery></app-gallery>
+    <article>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales
+    </article>
+</section>

@@ -1,0 +1,38 @@
+$white: #fff;
+
+.form, .input {
+    width: 100%;
+    margin-top: 0.3125rem;
+}
+
+.form {
+    min-width: 40vw;
+    display: flex;
+    align-items: center;
+    -webkit-text-fill-color: $white;
+
+    ::ng-deep * {
+         color: $white;
+    }
+
+    .search {
+        margin-left: 0.5rem;
+
+        > button {
+            width: 6.25rem;
+            border-color: $white;
+        }
+    }
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    color: $white !important;
+}
+
+::ng-deep.mat-form-field-underline {
+    background-color: $white !important;
+} 
+
+::ng-deep.mat-form-field-ripple {
+    background-color: $white !important;
+}

@@ -1,0 +1,10 @@
+<div class="container">
+    <div>
+        <mat-icon matBadge="{{transferService.quantity | async}}" matBadgeColor="warn">shopping_cart</mat-icon>
+    </div>
+    <div class="cart">
+        {{transferService.quantity | async}} st
+        <span>{{transferService.price | async}} kr</span>
+    </div>
+</div>
+

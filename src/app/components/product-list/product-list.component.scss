@@ -1,0 +1,23 @@
+$blue:         #1591a0;
+$light-blue:   #0fa7ba;
+
+ul {
+    width: 15.625rem;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0.3125rem 0 0 0;
+    background-color: $light-blue;
+    padding: 1rem 1rem 0.7rem;
+
+    li a {
+        display: block;
+        text-align: left;
+        white-space: nowrap;
+        text-decoration: none;
+    }
+        
+    li a:hover {
+        background: $blue;
+    }
+}
